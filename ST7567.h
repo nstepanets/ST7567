@@ -84,7 +84,7 @@ public:
          uint32_t clkAfter = 100000UL);
   ST7567(uint8_t w, uint8_t h, int8_t mosi_pin, int8_t sclk_pin,
          int8_t dc_pin, int8_t rst_pin, int8_t cs_pin);
-  ST7567(uint8_t w, uint8_t h, SPIClass *spi, int8_t dc_pin,
+  ST7567(uint8_t w, uint8_t h, SPIClass *spi_ptr, int8_t dc_pin,
          int8_t rst_pin, int8_t cs_pin, uint32_t bitrate = 8000000UL);
   ~ST7567(void);
 
