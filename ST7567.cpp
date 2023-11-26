@@ -441,7 +441,7 @@ bool ST7567::begin(uint8_t addr, bool reset, bool periphBegin) {
   st7567_command1(CMD_SET_RESISTOR_RATIO | 0x3);
   st7567_command1(CMD_DISPLAY_ON);
   st7567_command1(CMD_SET_VOLUME_FIRST);
-  st7567_command1(CMD_SET_VOLUME_SECOND | 0x30); // set default contrast value
+  st7567_command1(CMD_SET_VOLUME_SECOND | _contrast); // set default contrast value
 
   TRANSACTION_END
 

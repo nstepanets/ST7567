@@ -136,7 +136,7 @@ protected:
   uint32_t wireClk;    ///< Wire speed for ST7567 transfers
   uint32_t restoreClk; ///< Wire speed following ST7567 transfers
 #endif
-  uint8_t _contrast; ///< normal contrast setting for this device
+  uint8_t _contrast = 0x30; ///< contrast setting (0x00~0x3F)
 #if defined(SPI_HAS_TRANSACTION)
 protected:
   // Allow sub-class to change
