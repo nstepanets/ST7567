@@ -592,8 +592,8 @@ void ST7567::display(void) {
 
   uint8_t first_page = yUpdateMin / 8;
   uint8_t last_page = (yUpdateMax + 7) / 8;
-  uint8_t page_start = min((int16_t)bytes_per_page, xUpdateMin);
-  uint8_t page_end = max((int16_t)0, xUpdateMax);
+  uint8_t page_start = min(bytes_per_page, xUpdateMin);
+  uint8_t page_end = max((uint8_t)0, xUpdateMax);
 
   for(uint16_t p = first_page; p < last_page ; p++) {
     uint8_t bytes_remaining = bytes_per_page;
